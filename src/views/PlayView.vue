@@ -1,23 +1,26 @@
 <template>
     <main>
-        <p style="display:block">You can download the windows build here (Submitted version):</p>
-        <a href="https://drive.google.com/drive/u/0/folders/1U1AOMdeBNcZOVHVIAYzxHdaxIGA9i1iu">
-            <button class="red-button blue">Download (Google Drive)</button>
-        </a>
-        <ul>
-            <li>
-                <p><strong>•</strong> Download <strong>Build.zip</strong></p>
-            </li>
-            <li>
-                <p><strong>•</strong> Unzip and run <strong>Awoken.exe</strong></p>
-            </li>
-        </ul>
-        <br>
+        <div class="hero">
+            <RouterLink to="/play-game">
+                <button class="red-button play-button" type="button">▶ Play Online</button>
+            </RouterLink>
+            <p class="hint">No download needed — plays right in your browser.</p>
+        </div>
 
-        <p style="display:block">Or you can play the latest version directly in your browser:</p>
-        <a href="https://play.awoken.sk/">
-            <button class="red-button blue" type="button">Play Online</button>
-        </a>
+        <div class="download">
+            <p>Prefer the offline Windows version?</p>
+            <a href="https://drive.google.com/drive/u/0/folders/1U1AOMdeBNcZOVHVIAYzxHdaxIGA9i1iu">
+                <button class="red-button blue download-button" type="button">Download (Google Drive)</button>
+            </a>
+            <ul>
+                <li>
+                    <p class="small"><strong>•</strong> Download <strong>Build.zip</strong></p>
+                </li>
+                <li>
+                    <p class="small"><strong>•</strong> Unzip and run <strong>Awoken.exe</strong></p>
+                </li>
+            </ul>
+        </div>
 
         <br>
         <div class="p-div" >
@@ -70,6 +73,43 @@ export default {
         /* justify-content: center; */
         /* align-items: center; */
         /* height: 100vh; */
+    }
+
+    .hero {
+        margin-top: 40px;
+        margin-bottom: 50px;
+    }
+
+    .play-button {
+        font-size: 38px;
+        padding: 26px 56px;
+        box-shadow: var(--red) 0 18px 40px -16px;
+    }
+
+    .hint {
+        font-size: 1.1rem;
+        font-weight: 400;
+        color: var(--green);
+        margin-top: 18px;
+    }
+
+    .download {
+        opacity: 0.85;
+        margin-bottom: 30px;
+    }
+
+    .download p {
+        font-size: 1.1rem;
+    }
+
+    .download-button {
+        font-size: 18px;
+        padding: 12px 22px;
+    }
+
+    .small {
+        font-size: 1rem !important;
+        opacity: 0.8;
     }
 
     .p-div {
